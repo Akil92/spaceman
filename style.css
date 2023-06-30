@@ -1,11 +1,11 @@
-
-* {
+/* * {
 box-sizing: border-box;
-}  
+}   */
 
 body {
 font-family: Helvetica;
-height: 100vh;   
+height: 100vh; 
+background-image: url("./images/astronaut.jpeg");  
 }
 
 #title {
@@ -17,12 +17,26 @@ text-align: center;
 
 h2 {
 margin-right: 30%;
+color: yellow;
+/* padding */
 }
 
 span {
-font-size: larger;
+/* font-size:; */
 }
 
-profile {
-background-image: url(https://images.news18.com/ibnlive/uploads/2022/02/black-hole-2.png) ;
+h3 {
+color:crimson;
+padding-bottom: 60px;
+font-size:x-large;
+
 }
+section{
+text-align: center;
+font-size: xx-large;
+}
+
+div {
+color:antiquewhite;
+}
+

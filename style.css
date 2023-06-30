@@ -1,11 +1,9 @@
-/* * {
-box-sizing: border-box;
-}   */
-
 body {
 font-family: Helvetica;
 height: 100vh; 
-background-image: url("./images/astronaut.jpeg");  
+background-image: url("./images/astronaut.jpeg"); 
+background-size: 1500px 900px; 
+object-fit: none;
 }
 
 #title {
@@ -17,16 +15,17 @@ text-align: center;
 
 h2 {
 margin-right: 30%;
-color: yellow;
+color:greenyellow;
 /* padding */
 }
 
 span {
-/* font-size:; */
+font-size:xx-large;
+color: crimson;
 }
 
 h3 {
-color:crimson;
+color:rgb(246, 237, 71);
 padding-bottom: 60px;
 font-size:x-large;
 
@@ -37,6 +36,7 @@ font-size: xx-large;
 }
 
 div {
-color:antiquewhite;
+color:cyan;
+display:grid;
 }
 

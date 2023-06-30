@@ -1,0 +1,28 @@
+
+* {
+box-sizing: border-box;
+}  
+
+body {
+font-family: Helvetica;
+height: 100vh;   
+}
+
+#title {
+height: 50px;
+font-size: 80px;
+color: aqua;
+text-align: center;
+}
+
+h2 {
+margin-right: 30%;
+}
+
+span {
+font-size: larger;
+}
+
+profile {
+background-image: url(https://images.news18.com/ibnlive/uploads/2022/02/black-hole-2.png) ;
+}

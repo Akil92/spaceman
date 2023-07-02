@@ -2,8 +2,11 @@ body {
 font-family: Helvetica;
 height: 100vh; 
 background-image: url("./images/astronaut.jpeg"); 
-background-size: 1500px 900px; 
-object-fit: none;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+display:flex;
+flex-direction: row;
 }
 
 #title {
@@ -16,7 +19,8 @@ text-align: center;
 h2 {
 margin-right: 30%;
 color:greenyellow;
-/* padding */
+font-size: medium;
+max-width: 40%;
 }
 
 span {
@@ -34,8 +38,9 @@ section{
 text-align: center;
 font-size: xx-large;
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: center;
+width: 33%;
 }
 
 div {
@@ -44,3 +49,8 @@ display:flex;
 padding: 10px;
 }
 
+#instructions {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}

@@ -34,10 +34,12 @@ startGame()
 
 document.addEventListener("keydown",(event)=> {
  game.tries = game.tries - 1;
- game.answer.split().forEach(attempt => {
+ game.answer.split().forEach(attempt, index => {
  if (event.key === attempt) {
+    
  console.log(attempt,"Correct")
   }
  })
 console.log(event.key);
 })
+

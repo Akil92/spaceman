@@ -14,12 +14,14 @@ height: 50px;
 font-size: 80px;
 color: aqua;
 text-align: center;
+position: relative;
+bottom: 45%;
 }
 
 h2 {
 margin-right: 30%;
 color:greenyellow;
-font-size: medium;
+font-size: large;
 max-width: 40%;
 }
 
@@ -29,9 +31,16 @@ color: crimson;
 }
 
 h3 {
-color:rgb(246, 237, 71);
+color:greenyellow;
 padding-bottom: 60px;
 font-size:x-large;
+
+.restart {
+  position: relative;
+  bottom: 90px;
+  border: 2px solid #4CAF50;
+}
+
 
 }
 section{
@@ -46,11 +55,15 @@ width: 33%;
 div {
 color:cyan;
 display:flex;
-padding: 10px;
+padding:10px;
+position:relative;
+bottom: 30px;
 }
 
 #instructions {
     display: flex;
     flex-direction: column;
     width: 33%;
+    position: relative;
+    top: 80px;
 }

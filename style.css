@@ -23,6 +23,7 @@ margin-right: 30%;
 color:greenyellow;
 font-size: large;
 max-width: 40%;
+
 }
 
 span {
@@ -35,10 +36,15 @@ color:greenyellow;
 padding-bottom: 60px;
 font-size:x-large;
 
-.restart {
-  position: relative;
-  bottom: 90px;
-  border: 2px solid #4CAF50;
+#hint{
+color:aquamarine
+}
+
+
+spot {
+    font-size: xx-large;
+    margin-top: 30%;
+
 }
 
 

@@ -17,7 +17,8 @@ const letterList = document.querySelector("#dashes")
 let game = {
     tries : 4,
     guess: "",
-    answer: ""
+    answer: "",
+    hint: ""
 }
 
 const letterFieldEl = document.getElementById("letterField");
@@ -29,7 +30,9 @@ const lettersUsedEl = document.getElementById("lettersUsed");
 // -------event listeners--------
 document.addEventListener("keydown",(event)=> {
     game.tries = game.tries - 1;
-    game.answer.split().forEach(wordInput, index => {
+    let answerArr = game.answer.split("")
+    console.log(answerArr)
+    answerArr.forEach((wordInput, index)=> {
     if (event.key === wordInput) {
         // letterFieldEl.value += event.key;
         console.log(wordInput,"Correct")
@@ -55,14 +58,11 @@ function init() {
 
 init()
 
-document.onkeydown = function (e) {
-    console.log('key down');
-    console.log(e);
-  };
 
 function startGame() {
     let randomIndex = Math.floor(Math.random() * testWord.length)
     game.answer = testWord[randomIndex]
+    game.hint = hints[randomIndex]
     for(let i = 0; i < game.answer.length; i++) {
         let letterSpace = document.createElement("div");
         letterSpace.innerText = "_"
@@ -70,6 +70,8 @@ function startGame() {
         letterList.appendChild(letterSpace)
        }
        console.log(testWord[randomIndex].length)
+      let clue =  document.querySelector("#hints")
+      clue.innerHTML = game.hint
        
 }
 startGame()
@@ -95,7 +97,7 @@ function render() {
 
 }
 
-//check if user input is correct
+//------check if user input is correct
 // let winner = checkWordInputForWinner();
 // if(winner) return "YOU WIN! Continue to next word"
 // // User input not correct

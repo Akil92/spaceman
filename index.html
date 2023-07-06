@@ -16,21 +16,28 @@
     But guess wrong and the game is <span>OVER!!</span>
       </h2>
       <h3>LET THE GAME BEGIN</h3>
-      <button type="button" class="restart">restart game</button>
-  </div>
-  <section> 
-    <h1 id="title" class="main-title">SPACEM_N</h1>   
-    <div id="dashes" type="text"> </div>
-    <div id="letterField" type="text"></div>
-  </section>
-  <div id="lettersUsed"></div>
-  <div id="you lose"></div>
-  <div id="YOU WIN"></div>
-  <!-- <input type="text" id="keyboard-input" -->
-  <spot>
-    <h2 id="tries"> Guesses 4 </h2>
-    <h2 id="hints"> Hint: </h2>
-  </spot>
+      <button type="button" class="restart" style="border-color:red;" style="width: 10%;">restart game</button>
+   </div>
+   <section> 
+     <h1 id="title" class="main-title">SPACEM_N</h1>   
+     <div id="dashes" type="text"> </div>
+     <div id="letterField" type="text"></div>
+   </section>
+   <div id="lettersUsed"></div>
+   <div id="you lose"></div>
+   <div id="YOU WIN"></div>
+   <style>
+     .try {
+        font-size: xx-large;
+     }
+      .hint {
+        font-size: xx-large;
+      }
+   </style>
+   <spot>
+     <h2 class="try" id="tries" style="color:red;" style="font-weight: bolder;"> Guesses 4 </h2>
+     <h2 class="hint" id="hints"> Hint: </h2>
+   </spot>
 
 </body>
 </html>

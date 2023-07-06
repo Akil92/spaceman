@@ -22,8 +22,7 @@ h2 {
 margin-right: 30%;
 color:greenyellow;
 font-size: large;
-max-width: 40%;
-
+max-width: 40%; 
 }
 
 span {
@@ -36,22 +35,20 @@ color:greenyellow;
 padding-bottom: 60px;
 font-size:x-large;
 
-#hint{
-color:aquamarine
-}
-
 
 spot {
-    font-size: xx-large;
-    margin-top: 30%;
-
+color: aquamarine;
 }
 
+.try {
+color:aqua
+}
 
 }
 section{
 text-align: center;
 font-size: xx-large;
+color:greenyellow;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -68,6 +65,7 @@ bottom: 30px;
 
 #instructions {
     display: flex;
+    color: greenyellow;
     flex-direction: column;
     width: 33%;
     position: relative;

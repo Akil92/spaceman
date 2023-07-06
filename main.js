@@ -1,6 +1,6 @@
 console.log("JS works")
 //-------constants--------
-const testWord = ["Example", "Hippopatamus", "Georgia", "Pomegrenate", "Cathedral", "Recursion"]
+const testWord = ["example", "hippopatamus", "georgia", "pomegrenate", "cathedral", "recursion"]
 
 const hints = ["To show as a model or guide", "A large mamal", "Is a State and Country", "Type of fruit", "Place of worship", "A function that calls itself again and again"]
 
@@ -14,6 +14,10 @@ let wordInput; // Player's guess
 //-----cached element references----
 
 const letterList = document.querySelector("#dashes")
+
+
+
+const letters = document.querySelector("#letterField")
 let game = {
     tries : 4,
     guess: "",
@@ -21,9 +25,6 @@ let game = {
     hint: ""
 }
 
-const letterFieldEl = document.getElementById("letterField");
-
-const guessedLettersEl = document.getElementById("guessedLetters");
 
 const lettersUsedEl = document.getElementById("lettersUsed");
 
@@ -34,22 +35,35 @@ document.addEventListener("keydown",(event)=> {
     console.log(answerArr)
     answerArr.forEach((wordInput, index)=> {
     if (event.key === wordInput) {
-        // letterFieldEl.value += event.key;
+        let letterDivs = document.getElementsByClassName("letter")
+        for(let i=0; i < answerArr.length; i++) {
+           if (answerArr[i] === wordInput) 
+           letterDivs[i].innerText = wordInput;
+            
+        }
+
         console.log(wordInput,"Correct")
      }
     })
    console.log(event.key);
    })
 
+
+
+
+
+
+
+
 //    document.querySelector("main").addEventListener("click", handleInput);
 
-dashes.addEventListener("keydown", (e)=> {
-    if(!e.repeat) {
-        logMessage(`key "${e.key}" pressed [event: keydown]`);
-    } else {
-        logMessage(`key "${e.key}" repeating [event: keydown]`);
-    }
-});
+// dashes.addEventListener("keydown", (e)=> {
+//     if(!e.repeat) {
+//         logMessage(`key "${e.key}" pressed [event: keydown]`);
+//     } else {
+//         logMessage(`key "${e.key}" repeating [event: keydown]`);
+//     }
+// });
 
 // ----------functions-----------
 function init() {
@@ -65,37 +79,47 @@ function startGame() {
     game.hint = hints[randomIndex]
     for(let i = 0; i < game.answer.length; i++) {
         let letterSpace = document.createElement("div");
+        letterSpace.classList.add("letter");
         letterSpace.innerText = "_"
         console.log(letterSpace)
         letterList.appendChild(letterSpace)
-       }
-       console.log(testWord[randomIndex].length)
+
+    }
+      console.log(testWord[randomIndex].length)
       let clue =  document.querySelector("#hints")
       clue.innerHTML = game.hint
+
+
        
 }
 startGame()
 
-function minusTries() {
-    tries = tries - 1
-}
-
-// function wrongLetters() {
-//     if (this.incorrectLetters.length === this.tries){
-//         document.getElementById("youLose").innerText = "Sorry, you lose. Please try again.";
-
+// function minusTries() {
+//     tries = tries - 1;
+//     if (tries === 0) {
+//         return "YOU LOSE!"
 //     }
-// };
+//}
 
-//In response to user clicking the spot to input a letter
-function handleInput(evt) {
-//    if () return;
-console.log(evt.target.tagName)
-}
 
-function render() {
 
-}
+function wrongLetters() {
+    if (incorrectLetters.length === tries){
+         return "Sorry, you lose. Please try again.";
+         console.log(wrongLetters())
+
+    }
+};
+
+// //In response to user clicking the spot to input a letter
+// function handleInput(evt) {
+// //    if () return;
+// console.log(evt.target.tagName)
+// }
+
+// function render() {
+
+// }
 
 //------check if user input is correct
 // let winner = checkWordInputForWinner();

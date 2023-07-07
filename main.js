@@ -34,36 +34,19 @@ document.addEventListener("keydown",(event)=> {
     let answerArr = game.answer.split("")
     console.log(answerArr)
     answerArr.forEach((wordInput, index)=> {
-    if (event.key === wordInput) {
-        let letterDivs = document.getElementsByClassName("letter")
-        for(let i=0; i < answerArr.length; i++) {
-           if (answerArr[i] === wordInput) 
-           letterDivs[i].innerText = wordInput;
-            
-        }
-
-        console.log(wordInput,"Correct")
-     }
+      if (event.key === wordInput) {
+         let letterDivs = document.getElementsByClassName("letter")
+         for(let i=0; i < answerArr.length; i++) {
+            if (answerArr[i] === wordInput) 
+            letterDivs[i].innerText = wordInput;
+         }
+         console.log(wordInput,"Correct")
+       }
     })
    console.log(event.key);
-   })
+})
 
 
-
-
-
-
-
-
-//    document.querySelector("main").addEventListener("click", handleInput);
-
-// dashes.addEventListener("keydown", (e)=> {
-//     if(!e.repeat) {
-//         logMessage(`key "${e.key}" pressed [event: keydown]`);
-//     } else {
-//         logMessage(`key "${e.key}" repeating [event: keydown]`);
-//     }
-// });
 
 // ----------functions-----------
 function init() {
@@ -88,18 +71,15 @@ function startGame() {
       console.log(testWord[randomIndex].length)
       let clue =  document.querySelector("#hints")
       clue.innerHTML = game.hint
-
-
-       
 }
 startGame()
 
-// function minusTries() {
-//     tries = tries - 1;
-//     if (tries === 0) {
-//         return "YOU LOSE!"
-//     }
-//}
+
+
+function minusTries(cb) {
+   let tries = 4; tries >= 0; tries--;
+   tryEl.innerText = tries;
+}
 
 
 
@@ -111,6 +91,13 @@ function wrongLetters() {
     }
 };
 
+
+document.querySelector(".restart").addEventListener('click', function(){
+    window.location.reload();
+    return false;
+  });
+
+
 // //In response to user clicking the spot to input a letter
 // function handleInput(evt) {
 // //    if () return;
@@ -120,11 +107,5 @@ function wrongLetters() {
 // function render() {
 
 // }
-
-//------check if user input is correct
-// let winner = checkWordInputForWinner();
-// if(winner) return "YOU WIN! Continue to next word"
-// // User input not correct
-// return letterSpace
 
 

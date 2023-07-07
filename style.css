@@ -36,14 +36,6 @@ padding-bottom: 60px;
 font-size:x-large;
 
 
-spot {
-color: aquamarine;
-}
-
-.try {
-color:aqua
-}
-
 }
 section{
 text-align: center;
@@ -61,13 +53,14 @@ display:flex;
 padding:10px;
 position:relative;
 bottom: 30px;
+margin-left: 15px;
 }
 
 #instructions {
     display: flex;
     color: greenyellow;
     flex-direction: column;
-    width: 33%;
+    width: 30%;
     position: relative;
     top: 80px;
 }

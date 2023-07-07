@@ -6,6 +6,13 @@ const hints = ["To show as a model or guide", "A large mamal", "Is a State and C
 
 //------app's state (variables)-----
 
+let game = {
+    tries : 4,
+    guess: "",
+    answer: "",
+    hint: ""
+}
+
 let outcome; // Try again, You're correct, continue to next word, you lose, GAME OVER.
 
 let wordInput; // Player's guess
@@ -18,19 +25,16 @@ const letterList = document.querySelector("#dashes")
 
 
 const letters = document.querySelector("#letterField")
-let game = {
-    tries : 4,
-    guess: "",
-    answer: "",
-    hint: ""
-}
 
 
 const lettersUsedEl = document.getElementById("lettersUsed");
 
+const tryEl = document.getElementById("tries");
+
 // -------event listeners--------
 document.addEventListener("keydown",(event)=> {
     game.tries = game.tries - 1;
+    tryEl.innerText = game.tries;
     let answerArr = game.answer.split("")
     console.log(answerArr)
     answerArr.forEach((wordInput, index)=> {
@@ -39,14 +43,17 @@ document.addEventListener("keydown",(event)=> {
          for(let i=0; i < answerArr.length; i++) {
             if (answerArr[i] === wordInput) 
             letterDivs[i].innerText = wordInput;
-         }
-         console.log(wordInput,"Correct")
-       }
+          }
+           console.log(wordInput,"Correct")
+      }
     })
    console.log(event.key);
 })
 
-
+document.querySelector(".restart").addEventListener('click', function(){
+    window.location.reload();
+    return false;
+  });
 
 // ----------functions-----------
 function init() {
@@ -66,7 +73,6 @@ function startGame() {
         letterSpace.innerText = "_"
         console.log(letterSpace)
         letterList.appendChild(letterSpace)
-
     }
       console.log(testWord[randomIndex].length)
       let clue =  document.querySelector("#hints")
@@ -76,26 +82,13 @@ startGame()
 
 
 
-function minusTries(cb) {
-   let tries = 4; tries >= 0; tries--;
-   tryEl.innerText = tries;
+function winOrLose() {
+    if (answerArr[i] = wordInput) {
+        document.getElementById("result").innerHTML = "You Win!"
+    }
 }
 
 
-
-function wrongLetters() {
-    if (incorrectLetters.length === tries){
-         return "Sorry, you lose. Please try again.";
-         console.log(wrongLetters())
-
-    }
-};
-
-
-document.querySelector(".restart").addEventListener('click', function(){
-    window.location.reload();
-    return false;
-  });
 
 
 // //In response to user clicking the spot to input a letter

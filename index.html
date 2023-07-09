@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Spaceman</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script defer src="main.js"></script>
 </head>
 
 <body>
     <div id = instructions>
-      <h2>RULES: You are allowed 4 guesses per word.
+      <h2>RULES: You are allowed 5 guesses per word.
     If you guess the correct word, you win the round and continue on.
     But guess wrong and the game is <span>OVER!!</span>
       </h2>
@@ -24,8 +24,9 @@
      <div id="letterField" type="text"></div>
    </section>
    <div id="result"></div>
-   <div id="you lose"></div>
-   <div id="YOU WIN"></div>
+   <div id="lose" class="loser"></div>
+   <div id="win" class="winner"></div>
+   <div id="Message"></div> 
    <style>
      .try {
         font-size: x-large;
@@ -50,9 +51,14 @@
         background-color: yellowgreen;
         color: red;
      }
+     .loser {
+        color:blueviolet;
+        font-size: xx-large;
+        position:relative;
+     }
    </style>
    <spot>
-     <h2 class="try" id="tries" style="color:red;" style="font-weight: bolder;"> Guesses 4 </h2>
+     <h2 class="try" id="tries" style="color:red;" style="font-weight: bolder;"> Guesses 5 </h2>
      <h2 class="hint" id="hints"> Hint: </h2>
    </spot>
 

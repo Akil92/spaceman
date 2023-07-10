@@ -1,4 +1,4 @@
-console.log("JS works")
+
 //-------constants--------
 const testWord = ["example", "hippopatamus", "georgia", "pomegrenate", "cathedral", "recursion"]
 
@@ -28,11 +28,7 @@ const loser = document.getElementById("lose");
 
 const letters = document.querySelector("#letterField");
 
-const lettersUsedEl = document.getElementById("lettersUsed");
-
 const tryEl = document.getElementById("tries");
-
-const gameProgress = document.getElementById("Message");
 
 let answer = []
 
@@ -79,14 +75,7 @@ document.querySelector(".restart").addEventListener('click', function(){
     return false;
   });
 
-// ----------functions-----------
-function init() {
-
-}
-
-init()
-
-
+// ----------functions----------
 function startGame() {
     let randomIndex = Math.floor(Math.random() * testWord.length)
     game.answer = testWord[randomIndex]
@@ -105,25 +94,5 @@ function startGame() {
 }
 startGame()
 
-
-
-function createMessage(message) {
-
-}
-
-
-
-
-
-
-// //In response to user clicking the spot to input a letter
-// function handleInput(evt) {
-// //    if () return;
-// console.log(evt.target.tagName)
-// }
-
-// function render() {
-
-// }
 
 

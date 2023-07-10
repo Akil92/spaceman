@@ -12,20 +12,18 @@
 <body>
     <div id = instructions>
       <h2>RULES: You are allowed 5 guesses per word.
-    If you guess the correct word, you win the round and continue on.
-    But guess wrong and the game is <span>OVER!!</span>
+    If you guess the correct word, you win. But guess wrong and the game is <span>OVER!!</span>
       </h2>
       <h3>LET THE GAME BEGIN</h3>
       <button type="button" class="restart" style="border-color:aqua;" style="width: 10%;">restart game</button>
    </div>
    <section> 
      <h1 id="title" class="main-title">SPACEM_N</h1>   
+     <div id="lose" class="loser"></div>
+     <div id="win" class="winner"></div>
      <div id="dashes" type="text"> </div>
-     <div id="letterField" type="text"></div>
    </section>
    <div id="result"></div>
-   <div id="lose" class="loser"></div>
-   <div id="win" class="winner"></div>
    <div id="Message"></div> 
    <style>
      .try {
@@ -42,20 +40,33 @@
         box-sizing: border-box;
         border: solid;
         position:relative;
-        top: 90px;
+        top: 30px;
         right: -50px;
     }
      .restart {
         width:140px;
         height:30px;
-        background-color: yellowgreen;
+        background-color: yellow;
         color: red;
      }
      .loser {
         color:blueviolet;
-        font-size: xx-large;
-        position:relative;
-     }
+        font-size:90px;
+        position:absolute;
+        top:auto;
+        right:auto;
+        left:auto;
+        bottom:auto;
+    }
+    .winner{ 
+        color:gold;
+        font-size:90px;
+        position:absolute;
+        top:auto;
+        right:auto;
+        left:auto;
+        bottom:auto;
+    }
    </style>
    <spot>
      <h2 class="try" id="tries" style="color:red;" style="font-weight: bolder;"> Guesses 5 </h2>

@@ -20,7 +20,7 @@ bottom: 45%;
 
 h2 {
 margin-right: 30%;
-color:greenyellow;
+color:rgb(77, 208, 247);
 font-size: large;
 max-width: 40%; 
 }
@@ -31,7 +31,7 @@ color: crimson;
 }
 
 h3 {
-color:greenyellow;
+color:rgb(77, 208, 247);
 padding-bottom: 60px;
 font-size:x-large;
 
@@ -58,7 +58,7 @@ margin-left: 15px;
 
 #instructions {
     display: flex;
-    color: greenyellow;
+    color:greenyellow;
     flex-direction: column;
     width: 30%;
     position: relative;

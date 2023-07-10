@@ -26,10 +26,11 @@
    <div id="result"></div>
    <div id="Message"></div> 
    <style>
+     .guesses {
+        font-size: x-large;
+     }
      .try {
         font-size: x-large;
-        box-sizing: border-box;
-        border: solid;
         position: relative;
         right: -50px;
         
@@ -37,8 +38,6 @@
      }
       .hint {
         font-size: x-large;
-        box-sizing: border-box;
-        border: solid;
         position:relative;
         top: 30px;
         right: -50px;
@@ -69,7 +68,8 @@
     }
    </style>
    <spot>
-     <h2 class="try" id="tries" style="color:red;" style="font-weight: bolder;"> Guesses 5 </h2>
+    <h2 class="guesses" id="attempts"> Guesses:</h2>
+     <h2 class="try" id="tries" style="color:red;" style="font-weight: bolder;"></h2>
      <h2 class="hint" id="hints"> Hint: </h2>
    </spot>
 

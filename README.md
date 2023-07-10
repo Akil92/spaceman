@@ -11,7 +11,7 @@ CSS
 HTML
 
 # Getting Started
-https://github.com/Akil92/spaceman.git
+https://akil92.github.io/spaceman/
 
 # Next Steps
 Some future enhancements would be to show the letters that the player has already guessed and also to add categories.

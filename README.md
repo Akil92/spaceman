@@ -3,4 +3,5 @@ Spaceman is a guessing game created around words. The player will guess one lett
 The technologies used to support this game are: HTML, CSS and JavaScript.
 
 https://akil92.github.io/spaceman/
-![Alt text](<images/Screenshot 2023-07-09 at 7.16.17 PM.png>)
+
+![Alt text](<spaceman image.png>)

@@ -48,6 +48,7 @@ document.addEventListener("keydown",(event)=> {
                   if (answerArr[i] === wordInput) 
                   letterDivs[i].innerText = wordInput;
                   }
+                  answer.push(wordInput)
                 } 
             })
             if (JSON.stringify(answer.sort()) == JSON.stringify(answerArr.sort())) {

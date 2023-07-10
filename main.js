@@ -48,12 +48,11 @@ document.addEventListener("keydown",(event)=> {
                   if (answerArr[i] === wordInput) 
                   letterDivs[i].innerText = wordInput;
                   }
-                    if (JSON.stringify(answer.sort()) == JSON.stringify(answerArr.sort())) {
-                    winner.innerHTML = "YOU WIN";
-                    }
-                   answer.push(wordInput)
                 } 
             })
+            if (JSON.stringify(answer.sort()) == JSON.stringify(answerArr.sort())) {
+                winner.innerHTML = "YOU WIN";
+            }
           }
        }
 })
